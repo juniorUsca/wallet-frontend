@@ -1,0 +1,52 @@
+{
+  "name": "wallet",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "juniorUsca <junior.usca@gmail.com>",
+  "license": "GPL-3.0",
+  "scripts": {
+    "webpack": "webpack -w",
+    "stylus": "stylus -c -m src/styles/main.styl -o build/client/main.css",
+    "buildClient": "./node_modules/.bin/webpack --config ./webpack/webpack.client.config.js",
+    "buildServer": "./node_modules/.bin/webpack --config ./webpack/webpack.server.config.js",
+    "serveClient": "serve build/client -p 5000 -s -c 0",
+    "serveServer": "nodemon build/server/server.bundle.js"
+  },
+  "dependencies": {
+    "immutable": "^4.0.0-rc.12",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-immutable": "^4.0.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.11.0",
+    "nodemon": "^1.18.9",
+    "serve": "^10.1.1",
+    "stylus": "^0.54.5",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  }
+}
